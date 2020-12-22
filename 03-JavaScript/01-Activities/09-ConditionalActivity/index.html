@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+    <head>
+      <meta charset="UTF-8">
+      <title>conditional activity</title>  
+    </head>
+    <body> 
+        <script type="text/javascript">
+        var doYouEatSteak = confirm("Do you eat steak?");
+
+        if (doYouEatSteak) {
+            alert("Here's a steak sandwich")
+        } else {
+            alert("Here's a tofu stir fry!")
+        }
+
+        var birthYear = prompt("What year were you born?");
+        var age = 2020 - birthYear;
+        if (age < 21) {
+            alert("No Sake for you!")
+        } else {
+            alert("Here's some Sake!")
+        }
+        </script>
+    </body>
+</html>
