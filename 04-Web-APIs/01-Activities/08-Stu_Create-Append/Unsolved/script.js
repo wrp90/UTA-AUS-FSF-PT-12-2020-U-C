@@ -16,7 +16,7 @@ var li4 = document.createElement("li");
 h1El.textContent = "Welcome to my page";
 kittenEl.textContent = "This is my kitten 🐱.";
 nameEl.textContent = "His name is Jax.";
-favoriteEl.textContent = "My favorite foods are:";
+favoriteEl.textContent = "My favorite foods are:";1
 
 body.appendChild(h1El);
 body.appendChild(infoEl);
