@@ -13,6 +13,8 @@ var studentGrade = {
   comment: comment.value.trim()
 };
 
+var stringified = JSON.stringify(studentGrade)
+
 localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
 renderMessage();
 
