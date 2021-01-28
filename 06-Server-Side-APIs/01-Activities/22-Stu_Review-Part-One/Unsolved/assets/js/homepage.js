@@ -6,7 +6,6 @@ var repoSearchTerm = document.querySelector('#repo-search-term');
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
-
   var username = nameInputEl.value.trim();
 
   if (username) {
@@ -43,6 +42,7 @@ var getUserRepos = function (user) {
         response.json().then(function (data) {
           console.log(data);
           displayRepos(data, user);
+          console.log(data)
         });
       } else {
         alert('Error: ' + response.statusText);
