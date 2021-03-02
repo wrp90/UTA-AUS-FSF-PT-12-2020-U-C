@@ -1,10 +1,11 @@
 // Helper function to evaluate if a number is within a given range
 const inRange = (x, min, max) => (x - min) * (x - max) <= 0;
 
-function Student(first, last, age) {
+function Student(first, last, age, grade) {
   this.firstName = first;
   this.lastName = last;
   this.age = age;
+  this.grade = grade;
 
   // Method that will simulate method overloading in JavaScript
   this.displayGrade = function (grade) {
@@ -15,9 +16,9 @@ function Student(first, last, age) {
     let response;
     // Return a letter grade if a number grade was passed
     // Ex. 95 => 'A'
-    if (typeof input === 'number') {
+    if (inRange(input, 90, 100)) {
       // TODO: Add logic here to return a single letter grade
-      return response;
+      response = 'A';
     }
     // Return a range if a letter grade was passed
     // Ex. 'A' => '90 - 100'
@@ -28,6 +29,6 @@ function Student(first, last, age) {
   };
 }
 
-const John = new Student('John', 'Appleseed', '30');
+const John = new Student('John', 'Appleseed', '30', '95');
 console.log('John.displayGrade():', John.displayGrade(95));
-console.log('John.displayGrade():', John.displayGrade('B'));
+console.log('John.displayGrade():', John.displayGrade('A'));
