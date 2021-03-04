@@ -6,6 +6,12 @@ describe("DayCare", () => {
     it("should create an object with 'children' array, 'capacity' number, and 'ageLimit' number", () => {
       const dayCare = new DayCare();
 
+      log.black(message);
+
+      expect(mock).toBeCalledWith(colors.black, message);
+
+      mock.mockRestore();
+
       expect(dayCare).toEqual({ children: [], capacity: 3, ageLimit: 6 });
     });
   });
@@ -24,8 +30,10 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
-      const mock = jest.spyOn();
-      mock.mockImplementation();
+      const mock = jest.spyOn(console, "log");
+      mock.mockImplementation(() => {});
+      // const mock = jest.spyOn(console, "log");
+      // mock.mockImplementation(() => {});
 
       dayCare.addChild(child);
 
