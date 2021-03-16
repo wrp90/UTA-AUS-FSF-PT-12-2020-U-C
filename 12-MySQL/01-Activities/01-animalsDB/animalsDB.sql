@@ -33,5 +33,6 @@ VALUES ("Peter", false);
 
 -- Updates the row where the column name is peter --
 UPDATE people
+SET SQL_SAFE_UPDATES = 0;
 SET has_pet = true, pet_name = "Franklin", pet_age = 2
 WHERE name = "Peter";
