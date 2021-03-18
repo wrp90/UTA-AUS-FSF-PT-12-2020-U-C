@@ -1,14 +1,15 @@
 {
-  "name": "note-taker",
+  "name": "10-greatbay",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "**Instructions**",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "inquirer": "^8.0.0",
+    "mysql": "^2.18.1"
   }
 }
