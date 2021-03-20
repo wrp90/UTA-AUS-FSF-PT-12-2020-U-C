@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS programming_db;
 CREATE DATABASE programming_db;
 
 -- Use programming db for the following statements --
-USE programming_db,
+USE programming_db;
 
 CREATE TABLE programming_languages(
   -- Create a numeric column called "id" which will automatically increment its default value as we create new rows. --
@@ -22,14 +22,14 @@ CREATE TABLE programming_languages(
 );
 
 -- Create new example rows
-INSERT INTO programming_db (language, rating)
+INSERT INTO programming_languages (language, rating)
 VALUES ('HTML', 85);
 
-INSERT INTO programming_db (language, rating)
+INSERT INTO programming_languages (language, rating)
 VALUES ('CSS', 55);
 
-INSERT INTO programming_db (language, rating)
+INSERT INTO programming_languages (language, rating)
 VALUES ('JavaScript', 99);
 
-INSERT INTO programming_db (language, rating)
+INSERT INTO programming_languages (language, rating)
 VALUES ("SQL", 90);
