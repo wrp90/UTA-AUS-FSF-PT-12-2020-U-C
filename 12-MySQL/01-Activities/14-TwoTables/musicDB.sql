@@ -15,7 +15,7 @@ CREATE TABLE top5000 (
   PRIMARY KEY (position)
 );
 
-CREATE TABLE topAlbum (
+CREATE TABLE top_albums (
   position INT NOT NULL,
   artist VARCHAR(100) NULL,
   album VARCHAR(100) NULL,
@@ -29,4 +29,4 @@ CREATE TABLE topAlbum (
 );
 
 SELECT * FROM top5000;
-SELECT * FROM topAlbum;
+SELECT * FROM top_albums;

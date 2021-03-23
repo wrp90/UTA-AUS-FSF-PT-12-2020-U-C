@@ -43,5 +43,16 @@ router.delete('/:book_id', (req, res) => {
     })
     .catch((err) => res.json(err));
 });
+try {
+  const deletedBook = await Book.destroy({
+    where: {
+      book_id: req.params.book_id
+    }
+  })
+} catch (e) {
+  res.json(e);
+}
+
+res.json(deletedBook);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 // Create a connection object
-const sequelize = new Sequelize(
+const sequelize = new Sequelize (
   // Database name
   'library_db',
   // User
