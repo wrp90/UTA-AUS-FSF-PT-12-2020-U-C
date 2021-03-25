@@ -1,0 +1,22 @@
+{
+  "name": "uta-aus-fsf-pt-12-2020-u-c",
+  "version": "1.0.0",
+  "description": "Welcome to the Full-Stack Coding Bootcamp! The repository houses the curriculum for UTA-AUS-FSF-PT-12-2020-U-C.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrp90/UTA-AUS-FSF-PT-12-2020-U-C.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrp90/UTA-AUS-FSF-PT-12-2020-U-C/issues"
+  },
+  "homepage": "https://github.com/wrp90/UTA-AUS-FSF-PT-12-2020-U-C#readme",
+  "dependencies": {
+    "test": "^0.6.0"
+  }
+}

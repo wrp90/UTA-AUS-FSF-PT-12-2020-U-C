@@ -33,7 +33,19 @@ User.init(
     },
   },
   {
-    // TODO: Add hooks here
+    hooks: {
+      // Use the beforeCreate hook to work with data before a new instance is created
+      beforeCreate: async (newUserData) => {
+        // In this case, we are taking the user's Password, and making all letters lower case before adding it to the database.
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      // Here, we use the beforeUpdate hook to make all of the characters lower case in an updated password, before updating the database.
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return updatedUserData;
+      },
+    },
 
     sequelize,
     timestamps: false,

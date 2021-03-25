@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  password: process.env.PASSWORD,
+  password: 'Qazwsx1213765',
   database: 'ice_creamDB',
 });
 
