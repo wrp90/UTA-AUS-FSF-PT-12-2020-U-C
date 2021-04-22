@@ -38,13 +38,44 @@ app.post("/submit", ({ body }, res) => {
   // we have to do it here, because the ajax post will convert it
   // to a string instead of a boolean
   book.read = false;
+  db.books.insert(book, (err, data) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(data);
+    } 
+  });
 });
 
 // Find all books marked as read
-app.get("/read", (req, res) => {});
+app.get("/read", (req, res) => {
+  db.books.find(
+    {
+      read: true
+    }, 
+    (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
 
 // Find all books marked as unread
-app.get("/unread", (req, res) => {});
+app.get("/unread", (req, res) => {
+  db.books.find(
+    {
+      read: false
+    }, 
+    (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
 
 // Mark a book as having been read
 app.put("/markread/:id", (req, res) => {

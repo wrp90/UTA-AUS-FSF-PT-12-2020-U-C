@@ -50,7 +50,10 @@ const UserSchema = new Schema({
 });
 
 // setFullName: sets the current user's `fullName` property to their lastName appended to their `firstName`
-
+UserSchema.methods.fullToLast = function() {
+  const fullName = `${this.firstName} ${this.lastName}`;
+  return fullName;
+}
 // lastUpdatedDate: sets the current user's `lastUpdated` property to Date.now()
 
 // This creates our model from the above schema, using mongoose's model method
