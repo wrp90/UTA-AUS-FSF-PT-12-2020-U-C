@@ -10,6 +10,18 @@
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
     // CODE HERE
+    const request = window.indexedDB.open("thirdDatabase", 1);
+
+// Create an object store inside the onupgradeneeded method.
+request.onupgradeneeded = ({ target }) => {
+  const db = target.result;
+  const objectStore = db.createObjectStore("toDoList");
+};
+
+// On success console the result.
+request.onsuccess = event => {
+  console.log(request.result.version);
+};
     </script>
   </body>
 </html>
