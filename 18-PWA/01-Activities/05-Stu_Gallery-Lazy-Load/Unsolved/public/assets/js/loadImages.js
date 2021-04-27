@@ -10,6 +10,20 @@ function createEl(htmlString = "", className) {
 
 function initLazyImages() {
   // Enter your lazy loading code here
+  const lazyImages = document.querySelectorAll(".lazy-image");
+
+  function onIntersection(imageEntities) {
+    imageEntities.forEach(image => {
+      if (image.isIntersecting) {
+        observer.unobserve(image.target);
+        image.target.src = image.target.dataset.src;
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(onIntersection);
+
+  lazyImages.forEach(image => observer.observe(image));
 }
 
 function loadImages() {
@@ -43,6 +57,10 @@ function createCard(image) {
   const imageContainer = createEl("div", "card__image-container");
   const img = createEl("img", "card-img-top card__image--cover");
   // Enter your additional code here
+  img.setAttribute(
+    "src",
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOMrgcAATsA3BT31OAAAAAASUVORK5CYII="
+  );
   img.setAttribute("src", image.image);
   img.setAttribute("alt", image.description);
 
