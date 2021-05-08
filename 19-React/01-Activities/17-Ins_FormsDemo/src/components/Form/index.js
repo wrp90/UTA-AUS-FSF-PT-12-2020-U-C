@@ -5,7 +5,8 @@ class Form extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
-    lastName: ""
+    lastName: "",
+    password: '',
   };
 
   handleInputChange = event => {
@@ -26,7 +27,7 @@ class Form extends Component {
     alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
     this.setState({
       firstName: "",
-      lastName: ""
+      lastName: "",
     });
   };
 
