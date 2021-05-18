@@ -54,7 +54,7 @@ function App() {
                       type="success"
                       className="input-lg"
                     >
-                        Search
+                      Search
                     </Button>
                   </Col>
                 </Row>
@@ -64,7 +64,16 @@ function App() {
         </Row>
         <Row>
           <Col size="xs-12">
-            <h1>Render Recipes Here</h1>
+
+            <RecipeList/> 
+            {recipes.map(recipe => {
+              return <RecipeListItem 
+                key={recipe.title}
+                title={recipe.title}
+              />
+            })}
+            
+            
           </Col>
         </Row>
       </Container>

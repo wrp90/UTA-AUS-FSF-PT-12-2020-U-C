@@ -13,9 +13,38 @@ function App() {
     <BrowserRouter>
     <div>
       <Nav />
+      <ul>
+          <li>
+            <Books to="/">Books</Books>
+          </li>
+          <li>
+            <Books to="/books">Books</Books>
+          </li>
+          <li>
+            <Detail to="/detail">Detail</Detail>
+          </li>
+          <li>
+            <NoMatch to="/NoMatch">Detail</NoMatch>
+          </li>
+        </ul>
+
+        <hr />
+        
+        {/* <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+        </Switch> */}
       <Books />
     </div>
     </BrowserRouter>
+    
   );
 }
 
